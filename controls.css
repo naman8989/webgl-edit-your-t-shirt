@@ -1,0 +1,843 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+
+/*  reforming */
+
+@keyframes draggerRandom {
+	0%{
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+	50%{
+		background-color: rgba(0, 0, 0, 1.0);
+	}
+	100%{
+		background-color: rgba(0, 0, 0, 0);
+	}
+}
+.draggerRandomSt{
+	animation-name: draggerRandom;
+	animation-duration: 0.75s;
+	animation-fill-mode: forwards;
+}
+.draggerRandomRev{
+	animation-name: draggerRandom;
+	animation-duration: 0.75s;
+	animation-direction: reverse;
+	animation-fill-mode: forwards;
+}
+
+@keyframes draggerRandomBlink{
+	0%{
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+	50%{
+		background-color: rgba(0, 0, 0, 1.0);
+	}
+	100%{
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+}
+.draggerRandomBlink{
+	animation-name: draggerRandomBlink;
+	animation-duration: 0.75s;
+}
+
+
+#controlerdiv{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
+	display: flex;
+}
+
+#drager{
+	position: absolute;
+	display: block;
+	top: 15px;
+	width: 40%;
+	margin-left: 30%;
+	margin-right: 30%;
+	height: 15px;
+	background-color: white;
+	color: black;
+	border-radius: 40px;
+	font-size: 0.8rem;
+	font-weight: 800;
+	cursor: pointer;
+}
+
+.centering{
+	text-align: center;
+	align-items: center;
+	align-self: center ;
+	align-content: center;
+	justify-content: center;
+	justify-self: center;
+	justify-items: center;
+}
+
+#controlContext{
+	width: calc(100% - 60px);
+	margin: 30px;
+	height: calc(100% - 60px);
+	display: flex;
+	margin-top: 65px;
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 50px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+
+#controlOption{
+	width: 25%;
+	height: 70%;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-color: white;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 50px;
+	margin-right: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+#controlDisplay{
+	width: 25%;
+	height: 70%;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-color: white;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 50px;
+	margin-left: 100px;
+}
+
+
+@keyframes hoverTransition {
+	from{
+		background-color: #00000000;
+		color: #ffffff;
+		border-color: #00000000;
+	}
+	to{
+		background-color: #000000;
+		color: orange;
+		border-color: orange;
+	}
+}
+
+#TColor{
+	font-family: 'Playfair Display', serif;
+	display: flex;
+	height:10%;
+	margin: 2%;
+	padding: 2%;
+	width:94%;
+	color: white;
+	font-size: 1em;
+	cursor: pointer;
+	border-radius: 50px;
+	border-style: solid;
+	border-color: #00000000;
+}
+#TColor:hover{
+	cursor: pointer;
+	display: flex;
+	
+	font-size: 1.2em;
+	animation-name: hoverTransition;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+
+/* front image */
+#FImage{
+	font-family: 'Playfair Display', serif;
+	display: flex;
+	height:10%;
+	margin: 2%;
+	padding: 2%;
+	width:94%;
+	color: white;
+	font-size: 1em;
+	cursor: pointer;
+	border-radius: 50px;
+	border-style: solid;
+	border-color: #00000000;
+}
+#FImage:hover{
+	cursor: pointer;
+	display: flex;
+	
+	font-size: 1.2em;
+	animation-name: hoverTransition;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+
+/* back image */
+
+#BImage{
+	font-family: 'Playfair Display', serif;
+	display: flex;
+	height:10%;
+	margin: 2%;
+	padding: 2%;
+	width:94%;
+	color: white;
+	font-size: 1em;
+	cursor: pointer;
+	border-radius: 50px;
+	border-style: solid;
+	border-color: #00000000;
+}
+#BImage:hover{
+	cursor: pointer;
+	display: flex;
+	
+	font-size: 1.2em;
+	animation-name: hoverTransition;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+
+
+
+
+/*  reforming */
+
+
+
+
+
+/* t-shirt color control */
+:root {
+	
+    /* light, use dark text  */
+    --RED: #ff0000;
+    --YELLOW: #fffb00;
+    --ORANGE: #ff6f00;
+    --BLUE: #002aff;
+    --WHITE: #ffffff;
+    --BLACK: #000000;
+    --GREEN: #098005;
+    --LIGHTGREEN: #58ec53;
+	--PURPLE: #c30f99;
+	--PINK: #f56bc9;
+	--MUSTARD: #bab82b;
+	--BROWN: #6a341e;
+
+	--ambrosia: #FCDBBA;
+	--banana: #FEE694;
+	--blue-tack: #82BFE0;
+	--bud: #94C15C;
+	--butter: #F2C94C;
+	--camo: #AAA843;
+	--cappuccino: #C9B092;
+	--champagne: #FCEBD5;
+	--dusty-pink: #E4ADAD;
+	--forget-me-not: #91A7FA;
+	--ice: #E1EFF8;
+	--strawberry-yogurt: #E4BCAD;
+	--sun: #FEC305;
+	--grassy: #A8D363;
+	--lemon: #EAFC7E;
+	--lime: #73D645;
+	--limestone: #C9C5B5;
+	--melon: #F2994A;
+	--mink: #E8C9A1;
+	--spearmint: #94E0CF;
+	--mint: #C4EA70;
+	--mushroom: #EDE8D5;
+	--mustard: #CC9E08;
+	--pale-lemon: #F4FFDC;
+	--peach: #FFB190;
+	--petal: #F4E9F3;
+	--pebble: #B8B4BE;
+	--pink: #FFC9D8;
+	--posy: #DED7EC;
+	--powder-blue: #B5D0E0;
+	--powder-pink: #FBD1D1;
+	--primrose: #E1F7B0;
+	--robins-egg: #B8DEE0;
+	--sakura: #FFE4E4;
+	--salmon: #FF7863;
+	--sand: #E1BE7C;
+	--sea-glass: #7FD1AE;
+	--yellow: #FFE03D;
+
+	--apricot: #FF8652;
+	--blue-gray: #91A2C2;
+	--blush: #D67B71;
+	--bronze: #C27940;
+	--emerald: #55B95F;
+	--lilac: #8E8ADE;
+	--hazelnut: #D08E5A;
+	--sage: #87A376;
+
+	--rouge:	#CC3737;
+	--punch:	#FF5563;
+	--aubergine: #6A2352;
+	--auburn: #A12F2F;
+	--beetroot:	#7F0421;
+	--berry:	#461234;
+	--carmine:	#9A133E;
+	--charcoal: #4F4450;
+	--chestnut: #81291F;
+	--chocolate: #8F5D38;
+	--clay: #7D6050;
+	--burnt-orange:	#FF5F00;
+	--cerise:	#FF0F63;
+	--coffee: #624739;
+	--conker: #6F3131;
+	--coral: #EB4444;
+	--dusty-purple: #7D6391;
+	--eucalyptus: #688461;
+	--fern:	#4F8D08;
+	--forest: #2E644A;
+	--hot-pink:	#FF3263;
+	--ink:	#292C31;
+	
+	--iron:	#6B5C6C;
+	--lapis:	#2B4D8D;
+	
+	--leafy:	#318553;
+	
+	--magenta:	#BC2767;
+	--meadow:	#7A9A3E;
+	
+	
+	--midnight:	#1B3955;
+	
+	--moss:	#83A944;
+	
+	--navy:	#363A57;
+	--ocean:	#206777;
+	
+	--orange:	#FD8A04;
+	--orchid:	#7945BF;
+	--pond-bottom:	#264A46;
+	--purple:	#A95AF3;
+	--purple-slate:	#545375;
+	--rainforest:	#25422E;
+	--raspberry-jam:	#3C0D2B;
+	
+	--royal:	#4169E1;
+	--ruby:	#D1314B;
+	--squash:	#E96310;
+	--sea-foam:	#5D998B;
+	--sea-fog:	#758C92;
+	--slate:	#7184A5;
+	--spice:	#B54E16;
+	--spring:	#5ACB65;
+  	--teal: #29879C;
+  	--terracotta: #B76A61;
+	--twilight:	#203763;
+	--vavavoom:	#BF0D0D;
+  	--walnut: #381F19;
+}
+
+#TShirtColor{
+	margin: 0;
+	padding:20px;
+	cursor: pointer;
+	position: relative;
+	height: 88%;
+	width: 88%;
+	::-webkit-scrollbar{
+		width: 2px;
+		background-color: black;
+		border-radius: 10px;
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: rgba(255, 255, 255, 0.4);
+		border-radius: 10px;
+	}
+	  
+	display: none;
+}
+
+.swatches {
+	/* position: relative; */
+	/* background-color: white; */
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	overflow-y: scroll;
+	cursor:default;
+	/* font: 0.9em calibri, san-serif; */
+	/* color: #333; */
+}
+
+.swatches li {
+	margin: 2%;
+	height: 13%;
+	width: 17%;
+	border-radius: 2rem;
+	cursor:pointer;
+	display: block;
+	/* border-radius: 2em; */
+	/* position: relative; */
+	/* margin: 1rem ; */
+	/* text-align: center; */
+	/* vertical-align: middle; */
+}
+
+/* .swatches li span {
+	position: relative;
+	display: inline-block;
+	display: none;
+	top: 1rem;
+	height: 2rem;
+	font-size: 1.5vh;
+} */
+
+
+
+/* Front T-Shirt Color */
+
+#FrontImage{
+	height:100%;
+	width: 100%  ;
+	display: flex;
+	justify-content: center;
+	/* background-color: white; */
+	display: none;
+}
+
+#frontViewBoard{
+	height: 90%;
+	width: 90%;
+	margin: 0;
+	/* border: 3px solid white; */
+
+}
+
+#frontControlBoard{
+	height: 60%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+#frontUpArrow{
+	user-select: none;
+	/* position: relative; */
+	width: 10ex;
+	height: 1ex;
+	color: white;
+	border: 1px solid white;
+	border-top-left-radius: 2rem;
+	border-top-right-radius: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#frontUpArrow span{
+	font-size: 0.1ex;
+	transform: rotate(-90deg);
+}
+#frontUpArrow:hover{cursor: pointer; background-color: rgba(255, 255, 255, 0.5);}
+
+#frontDownArrow{
+	user-select: none;
+	width: 10ex;
+	height: 1ex;
+	color: white;
+	border: 1px solid white;
+	border-bottom-left-radius: 2rem;
+	border-bottom-right-radius: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#frontDownArrow span{
+	font-size: 0.1ex;
+	transform: rotate(90deg);
+}
+#frontDownArrow:hover{cursor: pointer; background-color: rgba(255, 255, 255, 0.5);}
+
+#frontBelowUpArrow{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50%;
+	width: 100%;
+}
+
+#frontLeftArrow{
+	user-select: none;
+	/* margin-right: 0; */
+	color: white;
+	border: 1px solid white;
+	height: 10ex;
+	width: 1ex;
+	border-bottom-left-radius: 2rem;
+	border-top-left-radius: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#frontLeftArrow span{
+	font-size: 0.1ex;
+	transform: rotate(180deg);
+}
+#frontLeftArrow:hover{cursor: pointer; background-color: rgba(255, 255, 255, 0.5);}
+
+#frontRightArrow{
+	user-select: none;
+	color: white;
+	border: 1px solid white;
+	height: 10ex;
+	width: 1ex;
+	border-bottom-right-radius: 2rem;
+	border-top-right-radius: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#frontRightArrow span{
+	font-size: 0.1ex;
+	transform: rotate(0deg);
+}
+#frontRightArrow:hover{cursor: pointer; background-color: rgba(255, 255, 255, 0.5);}
+
+
+
+#frontDropBox{
+	margin: 0;
+	border: 1px solid white;
+	border-radius: 25px;
+	width: 100%;
+	height: 40%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	font-size: 0.7rem;
+	color: rgba(255, 255, 255, 1.0);
+	font-family: 'Playfair Display', serif;
+	background-repeat:no-repeat ;
+	background-size:contain;
+	background-position: center;
+}
+
+#frontGetImage{
+	position: relative;
+	opacity: 0.0;
+	width: 100%;
+	height: 85%;
+	color: white;
+	background-color: wheat;
+}
+
+#frontSize{
+	margin-top: 20px;
+	font-size: 2vh;
+	color: white;
+	font-family: 'Playfair Display', serif;
+}
+#frontSizeInput{
+	width: 50px;
+	background-color: #00000078;
+	border: none;
+	border-radius: 0.5rem;
+	color: white;
+}
+
+#frontPos{
+	font-size: 2vh;
+	color: white;
+	font-family: 'Playfair Display', serif;
+
+}
+#frontPosInputX{
+	position: relative;
+	width: 22%;
+	background-color: #00000078;
+	border: none;
+	border-radius: 0.5rem;
+	color: white;
+}
+#frontPosInputY{
+	position: relative;
+	width: 22%;
+	background-color: #00000078;
+	border: none;
+	border-radius: 0.5rem;
+	color: white;
+}
+
+#info{
+	font-size: 0.75em;
+	display: inline-block;
+	font-family: 'Playfair Display', serif;
+	color: white;
+}
+
+#pos-size{
+	width: 60%;
+	max-width: 80%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+
+/* Back T-Shirt Color */
+
+#BackImage{
+	height:100%;
+	width: 100%  ;
+	display: flex;
+	justify-content: center;
+	/* background-color: white; */
+	display: none;
+}
+
+#backViewBoard{
+	height: 90%;
+	width: 90%;
+	margin: 0;
+	/* border: 3px solid white; */
+
+}
+
+#backControlBoard{
+	height: 60%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+#backUpArrow{
+	user-select: none;
+	/* position: relative; */
+	width: 10ex;
+	height: 1ex;
+	color: white;
+	border: 1px solid white;
+	border-top-left-radius: 2rem;
+	border-top-right-radius: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#backUpArrow span{
+	font-size: 0.1ex;
+	transform: rotate(-90deg);
+}
+#backUpArrow:hover{cursor: pointer; background-color: rgba(255, 255, 255, 0.5);}
+
+#backDownArrow{
+	user-select: none;
+	width: 10ex;
+	height: 1ex;
+	color: white;
+	border: 1px solid white;
+	border-bottom-left-radius: 2rem;
+	border-bottom-right-radius: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#backDownArrow span{
+	font-size: 0.1ex;
+	transform: rotate(90deg);
+}
+#backDownArrow:hover{cursor: pointer; background-color: rgba(255, 255, 255, 0.5);}
+
+#backBelowUpArrow{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50%;
+	width: 100%;
+}
+
+#backLeftArrow{
+	user-select: none;
+	/* margin-right: 0; */
+	color: white;
+	border: 1px solid white;
+	height: 10ex;
+	width: 1ex;
+	border-bottom-left-radius: 2rem;
+	border-top-left-radius: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#backLeftArrow span{
+	font-size: 0.1ex;
+	transform: rotate(180deg);
+}
+#backLeftArrow:hover{cursor: pointer; background-color: rgba(255, 255, 255, 0.5);}
+
+#backRightArrow{
+	user-select: none;
+	color: white;
+	border: 1px solid white;
+	height: 10ex;
+	width: 1ex;
+	border-bottom-right-radius: 2rem;
+	border-top-right-radius: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#backRightArrow span{
+	font-size: 0.1ex;
+	transform: rotate(0deg);
+}
+#backRightArrow:hover{cursor: pointer; background-color: rgba(255, 255, 255, 0.5);}
+
+
+
+#backDropBox{
+	margin: 0;
+	border: 1px solid white;
+	border-radius: 25px;
+	width: 100%;
+	height: 40%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	font-size: 0.7rem;
+	color: rgba(255, 255, 255, 1.0);
+	font-family: 'Playfair Display', serif;
+	background-repeat:no-repeat ;
+	background-size:contain;
+	background-position: center;
+}
+
+#backGetImage{
+	position: relative;
+	opacity: 0.0;
+	width: 100%;
+	height: 85%;
+	color: white;
+	background-color: wheat;
+}
+
+#backSize{
+	margin-top: 20px;
+	font-size: 2vh;
+	color: white;
+	font-family: 'Playfair Display', serif;
+}
+#backSizeInput{
+	width: 50px;
+	background-color: #00000078;
+	border: none;
+	border-radius: 0.5rem;
+	color: white;
+}
+
+#backPos{
+	font-size: 2vh;
+	color: white;
+	font-family: 'Playfair Display', serif;
+
+}
+#backPosInputX{
+	position: relative;
+	width: 22%;
+	background-color: #00000078;
+	border: none;
+	border-radius: 0.5rem;
+	color: white;
+}
+#backPosInputY{
+	position: relative;
+	width: 22%;
+	background-color: #00000078;
+	border: none;
+	border-radius: 0.5rem;
+	color: white;
+}
+
+
+
+/* audio css */
+
+#audioSet{
+	display: flex;
+	height: 10%;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	justify-content: space-between;
+	background-color: black;
+	border-radius: 50px;
+	display: flex;
+	border: 1px solid rgba(255, 166, 0, 0.15);
+	justify-content: space-around;
+}
+#audioSet:hover{
+	background-color: black;
+	border-style: none;
+}
+
+/* #audioIconLabel{
+	height: 3%;
+	width: 70%;
+	margin-left: 0;
+	background-color: rgba(0, 0, 0, 0);
+	border-radius: 50px;
+	color: white;
+} */
+
+.material-symbols-outlined {
+	color: white;
+	cursor: pointer;
+	font-size: 3vh;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' 0.2,
+  'opsz' 24,
+}
+.material-symbols-outlined:hover{
+	animation-name: hoverTransition;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+#songName{
+	display: inline-block;
+	min-width: 50px;
+	width: 30%;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.9);
+	font-size: small;
+	font-family: 'Playfair Display', serif;
+	color: orange;
+}
+
+.blink_me {
+	animation: blinker 1s linear infinite;
+}
+  
+@keyframes blinker {
+	50% {
+	  opacity: 0;
+	}
+}

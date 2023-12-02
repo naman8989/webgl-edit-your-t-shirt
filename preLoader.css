@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300);
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+#preLoaderId{
+    position:absolute;
+    z-index: 10;
+    display: block;
+    flex-direction:row;
+    -webkit-flex-direction:row;
+    -ms-flex-direction:row;
+    -mos-flex-direction:row;
+    -o-flex-direction:row;
+    justify-content:center;
+    -webkit-justify-content:center;
+    -ms-justify-content:center;
+    height:100%;
+    width:100%;
+    background-color:#000000;    
+    user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+    
+
+/* .done {
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: all .33s ease;
+}
+
+.count {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-weight: 100;
+  font-size: 3em;
+  margin-top: -1.33em;
+  color: #af71af;
+} */
+
+#progress-bar {
+    background: #af71af;
+    position: absolute;
+    top: 50%;
+    height: 20px;
+  }
+  @keyframes preLoad {
+    0%   { 
+        opacity: 1;
+    }
+    25%  { 
+        opacity: 0.75;
+    }
+    50%  { 
+        opacity: 0.5;
+    }
+    75%  { 
+        opacity: 0.25;
+    }
+    100% { 
+        opacity: 0;
+        display: none;
+    }
+  }
+  .done {
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /* transition: all .33s ease; */
+    animation: preLoad 2s;
+    animation-fill-mode: forwards;
+  }
+  
+  #Datacount {
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 3em;
+    margin-top: -1.33em;
+    color: #af71af;
+    font-family: 'Playfair Display', serif;
+  }
