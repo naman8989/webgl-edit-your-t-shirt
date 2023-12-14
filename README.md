@@ -14,4 +14,4 @@ Part-1=>
 
 
 Part-2=>
-[![Watch the video](https://www.soft8soft.com/wp-content/uploads/2018/08/webgl_error.png)]([https://youtu.be/q2cUNxp4Mr8](https://youtu.be/MqBP3ANTDfY)https://youtu.be/MqBP3ANTDfY)
+[![Watch the video](https://www.soft8soft.com/wp-content/uploads/2018/08/webgl_error.png)](https://youtu.be/MqBP3ANTDfY)
