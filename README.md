@@ -8,10 +8,10 @@ My webgl projec made with the help of unity.
 
 Link to video :- 
 
-Part-1=>
+Part-1 (Click on the image)=>
 
 [![Watch the video](https://avatars.githubusercontent.com/u/20603608?s=200&v=4)](https://youtu.be/q2cUNxp4Mr8)
 
 
-Part-2=>
+Part-2 (Click on the image)=>
 [![Watch the video](https://www.soft8soft.com/wp-content/uploads/2018/08/webgl_error.png)](https://youtu.be/MqBP3ANTDfY)
